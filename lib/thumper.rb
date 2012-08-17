@@ -1,3 +1,8 @@
+require 'rubygems'
+require 'hot_bunnies'
+require 'mailbox'
+require 'mostash'
+
 CONFIG = Mostash.new
 
 CONFIG.env = ENV['THUMPER_ENV']
