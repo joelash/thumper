@@ -21,6 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Listen to rabbit messages}
   gem.email = "asher.friedman@gmail.com"
   gem.authors = ["Joel Friedman"]
+  gem.executables = ['thumper']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
