@@ -1,7 +1,7 @@
 class BunnyRabbit
   class << self
     def listen &block
-      queue.subscribe(:blocking => false) do |headers, msg|
+      queue.subscribe(:ack => true, :blocking => false) do |headers, msg|
         block.call headers, msg
         headers.ack
       end
