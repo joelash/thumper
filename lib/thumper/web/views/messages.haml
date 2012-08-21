@@ -1,0 +1,16 @@
+%h3 You've recevied #{@messages.count} messages
+- unless @messages.empty?
+  %h5 The latest was received at #{@messages.last.received_at.strftime('%F %r')}
+
+  %table
+    %thead
+      %tr
+        %th Received At
+        %th &nbsp;
+        %th Body
+    %tbody
+      - @messages.each do |message|
+        %tr
+          %td= message.received_at.strftime '%F %r'
+          %td &nbsp;
+          %td= message.body

@@ -3,6 +3,8 @@ require 'hot_bunnies'
 require 'mailbox'
 require 'mostash'
 
+require 'sinatra'
+
 CONFIG = Mostash.new
 
 CONFIG.env = ENV['THUMPER_ENV']

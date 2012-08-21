@@ -14,3 +14,7 @@ end
 gem 'hot_bunnies'
 gem 'mailbox'
 gem 'mostash'
+
+# web
+gem 'sinatra'
+gem 'haml'
