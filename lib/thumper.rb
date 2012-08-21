@@ -8,10 +8,16 @@ require 'sinatra'
 CONFIG = Mostash.new
 
 CONFIG.env = ENV['THUMPER_ENV']
+
+unless CONFIG.env == 'production'
+  require 'dotenv'
+  Dotenv.load
+end
+
 CONFIG.rabbit = {
   :enabled => ENV['WITHOUT_RABBIT'] || true,
   :broker => {
-    :url => ENV['CLOUDAMQP_URL'] || 'amqp://app6795846_heroku.com:ggZ9ywmvRTbPD-NfOMIcCr6KqywHviYy@tiger.cloudamqp.com/app6795846_heroku.com'
+    :url => ENV['CLOUDAMQP_URL']
   },
   :inbound => {
     :exchange => {

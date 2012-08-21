@@ -11,6 +11,8 @@ group :development do
   gem "jeweler", "~> 1.8.4"
 end
 
+gem 'dotenv', :groups => [:development, :test]
+
 gem 'hot_bunnies'
 gem 'mailbox'
 gem 'mostash'
